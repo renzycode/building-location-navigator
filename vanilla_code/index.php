@@ -56,12 +56,6 @@
         top: 900px;
         left: 1050px;
     }
-
-    
-
-
-
-
     </style>
 </head>
 
@@ -78,34 +72,10 @@
                 <div class="office" id="office2">SUPPLY</div>
                 <div class="office" id="office3">AO</div>
 
-
-
             </div>
         </div>
-
-
-
     </div>
 
-
-    <div class="hud-canvas fixed-top m-5 p-2 bg-primary rounded shadow" style="width: 100px;">
-        <button class="btn btn-light rounded mb-2" style="width: 85px;"> <strong>FLOOR</strong> <br> 0</button>
-        <button class="btn btn-light rounded mb-2" style="width: 85px;"> <strong>FLOOR</strong> <br> 1</button>
-        <button class="btn btn-light rounded mb-2" style="width: 85px;"> <strong>FLOOR</strong> <br> 2</button>
-        <button class="btn btn-light rounded mb-2" style="width: 85px;"> <strong>FLOOR</strong> <br> 3</button>
-        <button class="btn btn-light rounded" style="width: 85px;"> <strong>
-                <h1 class="mb-0"><i class="bi bi-zoom-in"></h1></i>
-            </strong></button>
-        <button class="btn btn-light rounded" style="width: 85px;"> <strong>
-                <h1 class="mb-0"><i class="bi bi-zoom-in"></h1></i>
-            </strong></button>
-    </div>
-
-
-
-
-
-    </div>
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -127,10 +97,6 @@
         </div>
     </div>
 
-
-
-    </div>
-
     <div class="hud-canvas fixed-top m-5 p-2 bg-primary shadow" style="width: 100px;">
         <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 0</button>
         <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 1</button>
@@ -146,7 +112,8 @@
                 <h2 class="mb-0"><i class="bi bi-zoom-out"></h2></i>
             </strong>
         </button>
-        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;" onclick="reset()"> <strong>RESET</strong> <br></button>
+        <button class="btn btn-light rounded-0" style="width: 85px;" onclick="reset()"> <strong>RESET</strong>
+            <br></button>
     </div>
 
 
@@ -226,7 +193,6 @@
         };
         setTransform();
     }
-
     </script>
 
 
