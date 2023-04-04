@@ -13,38 +13,48 @@
     #layout-image {
         width: 100%;
     }
-    .inner-canvas{
+
+    .inner-canvas {
         padding: 400px;
     }
+
     body {
         overflow: hidden;
         /* Hide scrollbars */
     }
-
     </style>
 </head>
 
 <body class="bg-secondary">
 
-        
+
     <div class="outer-canvas">
         <div id="zoom">
-                
+
             <div class="inner-canvas">
                 <img src="layout.png" alt="zoom" id="layout-image">
             </div>
         </div>
-        
+
     </div>
 
-        <div class="hud-canvas fixed-top m-5 p-2 bg-primary rounded shadow" style="width: 100px;">
-            <button class="btn btn-light rounded mb-2" style="width: 85px;"> <strong>FLOOR</strong> <br> 0</button>
-            <button class="btn btn-light rounded mb-2" style="width: 85px;"> <strong>FLOOR</strong> <br> 1</button>
-            <button class="btn btn-light rounded mb-2" style="width: 85px;"> <strong>FLOOR</strong> <br> 2</button>
-            <button class="btn btn-light rounded mb-2" style="width: 85px;"> <strong>FLOOR</strong> <br> 3</button>
-            <button class="btn btn-light rounded" style="width: 85px;"> <strong><h1 class="mb-0"><i class="bi bi-zoom-in"></h1></i></strong></button>
-            <button class="btn btn-light rounded" style="width: 85px;"> <strong><h1 class="mb-0"><i class="bi bi-zoom-in"></h1></i></strong></button>
-        </div>
+    <div class="hud-canvas fixed-top m-5 p-2 bg-primary shadow" style="width: 100px;">
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 0</button>
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 1</button>
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 2</button>
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 3</button>
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;" onclick="zoomIn()">
+            <strong>
+                <h2 class="mb-0"><i class="bi bi-zoom-in"></h2></i>
+            </strong>
+        </button>
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;" onclick="zoomOut()">
+            <strong>
+                <h2 class="mb-0"><i class="bi bi-zoom-out"></h2></i>
+            </strong>
+        </button>
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;" onclick="reset()"> <strong>RESET</strong> <br></button>
+    </div>
 
     <script>
     var scale = 1,
@@ -93,6 +103,28 @@
         pointX = e.clientX - xs * scale;
         pointY = e.clientY - ys * scale;
 
+        setTransform();
+    }
+
+    function zoomIn() {
+        scale = scale + 0.1;
+        setTransform();
+    }
+
+    function zoomOut() {
+        scale = scale - 0.1;
+        setTransform();
+    }
+
+    function reset() {
+        scale = 1;
+        panning = false;
+        pointX = 0;
+        pointY = 0;
+        start = {
+            x: 0,
+            y: 0
+        };
         setTransform();
     }
     </script>
