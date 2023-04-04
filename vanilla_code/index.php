@@ -8,7 +8,6 @@
     <meta https-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" />
-    <link rel="stylesheet" href="assets/vendor/fontawesome-free/css/all.min.css">
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <style>
     #layout-image {
@@ -31,20 +30,19 @@
     .office {
         position: absolute;
         cursor: pointer;
-        border: 2px solid black;
-        border-radius: 50%;
-        background-color: #99B898;
-        width: 80px;
-        height: 50px;
         text-align: center;
         line-height: 50px;
         font-weight: bold;
-        font-size: 20px;
+        font-size: 30px;
+        color: red;
+        
     }
+    
 
     #office1 {
         top: 600px;
         left: 750px;
+        
     }
 
     #office2 {
@@ -68,9 +66,9 @@
 
             <div class="inner-canvas">
                 <img src="layout.png" alt="zoom" id="layout-image">
-                <div class="office" id="office1">KM</div>
-                <div class="office" id="office2">SUPPLY</div>
-                <div class="office" id="office3">AO</div>
+                <div class="office bi bi-geo-alt-fill" id="office1">KM</div>
+                <div class="office bi bi-geo-alt-fill" id="office2">SUPPLY</div>
+                <div class="office bi bi-geo-alt-fill" id="office3">AO</div>
 
             </div>
         </div>
