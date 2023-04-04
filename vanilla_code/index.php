@@ -27,6 +27,7 @@
     }
 
 
+
     .office {
         position: absolute;
         cursor: pointer;
@@ -59,11 +60,12 @@
     
 
 
+
+
     </style>
 </head>
 
 <body class="bg-secondary">
-
 
 
 
@@ -80,6 +82,7 @@
 
             </div>
         </div>
+
 
 
     </div>
@@ -124,6 +127,27 @@
         </div>
     </div>
 
+
+
+    </div>
+
+    <div class="hud-canvas fixed-top m-5 p-2 bg-primary shadow" style="width: 100px;">
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 0</button>
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 1</button>
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 2</button>
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 3</button>
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;" onclick="zoomIn()">
+            <strong>
+                <h2 class="mb-0"><i class="bi bi-zoom-in"></h2></i>
+            </strong>
+        </button>
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;" onclick="zoomOut()">
+            <strong>
+                <h2 class="mb-0"><i class="bi bi-zoom-out"></h2></i>
+            </strong>
+        </button>
+        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;" onclick="reset()"> <strong>RESET</strong> <br></button>
+    </div>
 
 
     <script>
@@ -176,9 +200,33 @@
         setTransform();
     }
 
+
     $('#exampleModal').on('shown.bs.modal', function() {
         $('#modal').trigger('focus')
     })
+
+    function zoomIn() {
+        scale = scale + 0.1;
+        setTransform();
+    }
+
+    function zoomOut() {
+        scale = scale - 0.1;
+        setTransform();
+    }
+
+    function reset() {
+        scale = 1;
+        panning = false;
+        pointX = 0;
+        pointY = 0;
+        start = {
+            x: 0,
+            y: 0
+        };
+        setTransform();
+    }
+
     </script>
 
 
