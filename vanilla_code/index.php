@@ -54,6 +54,53 @@
         top: 900px;
         left: 1050px;
     }
+
+
+
+    .legend {
+  width: 200px;
+  padding: 2px;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+
+}
+
+.legend h3 {
+  font-size: 16px;
+  margin-top: 0;
+}
+
+.legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend .square {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  
+}
+
+.legend .square-1 {
+  background-color: #f00;
+}
+
+.legend .square-2 {
+  background-color: #0f0;
+}
+
+.legend .square-3 {
+  background-color: #00f;
+}
+
     </style>
 </head>
 
@@ -112,7 +159,20 @@
         </button>
         <button class="btn btn-light rounded-0" style="width: 85px;" onclick="reset()"> <strong>RESET</strong>
             <br></button>
+            
     </div>
+
+    <div class="legend fixed-bottom m-5 p-2 bg-light shadow">
+  <h3>Legend</h3>
+  <ul>
+    <li><span class="square square-1"></span> <span>Category 1</span></li>
+    <li><span class="square square-2"></span> <span>Category 2</span></li>
+    <li><span class="square square-3"></span> <span>Category 3</span></li>
+  </ul>
+</div>
+
+    
+    
 
 
     <script>
