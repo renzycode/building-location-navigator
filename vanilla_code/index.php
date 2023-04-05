@@ -41,18 +41,18 @@
 
     #office1 {
         top: 600px;
-        left: 750px;
+        left: 490px;
         
     }
 
     #office2 {
-        top: 800px;
-        left: 1200px;
+        top: 500px;
+        left: 740px;
     }
 
     #office3 {
-        top: 900px;
-        left: 1050px;
+        top: 750px;
+        left: 650px;
     }
 
 
@@ -142,34 +142,34 @@
         </div>
     </div>
 
-    <div class="hud-canvas fixed-top m-5 p-2 bg-primary shadow" style="width: 100px;">
-        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 0</button>
-        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 1</button>
-        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 2</button>
-        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;"> <strong>FLOOR</strong> <br> 3</button>
-        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;" onclick="zoomIn()">
+    <div class="hud-canvas fixed-top m-5 p-1 bg-primary shadow" style="width: 88px;">
+        <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 0</strong></button>
+        <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 1</strong></button>
+        <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 2</strong></button>
+        <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 3</strong></button>
+        <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;" onclick="zoomIn()">
             <strong>
-                <h2 class="mb-0"><i class="bi bi-zoom-in"></h2></i>
+                <h5 class="mb-0"><i class="bi bi-zoom-in"></h5></i>
             </strong>
         </button>
-        <button class="btn btn-light mb-2 rounded-0" style="width: 85px;" onclick="zoomOut()">
+        <button class="btn btn-light mb-2 rounded-0" style="width: 80px;" onclick="zoomOut()">
             <strong>
-                <h2 class="mb-0"><i class="bi bi-zoom-out"></h2></i>
+                <h5 class="mb-0"><i class="bi bi-zoom-out"></h5></i>
             </strong>
         </button>
-        <button class="btn btn-light rounded-0" style="width: 85px;" onclick="reset()"> <strong>RESET</strong>
+        <button class="btn btn-light rounded-0" style="width: 80px;" onclick="reset()"> <strong>RESET</strong>
             <br></button>
             
     </div>
 
-    <div class="legend fixed-bottom m-5 p-2 bg-light shadow">
-  <h3>Legend</h3>
-  <ul>
-    <li><span class="square square-1"></span> <span>Category 1</span></li>
-    <li><span class="square square-2"></span> <span>Category 2</span></li>
-    <li><span class="square square-3"></span> <span>Category 3</span></li>
-  </ul>
-</div>
+    <div class="legend fixed-bottom m-5 p-2 bg-light border-primary border border-4 rounded-0 shadow">
+    <h3>Departments</h3>
+    <ul>
+        <li><span class="square square-1"></span> <span>KM</span></li>
+        <li><span class="square square-2"></span> <span>AO</span></li>
+        <li><span class="square square-3"></span> <span>SUPPLY</span></li>
+    </ul>
+    </div>
 
     
     
