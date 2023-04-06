@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" />
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   
     <style>
     #layout-image {
 
@@ -36,13 +37,14 @@
         font-size: 30px;
         color: red;
         
+        
     }
     
 
     #office1 {
-        top: 600px;
+        top: 1150px;
         left: 490px;
-        
+       
     }
 
     #office2 {
@@ -54,6 +56,8 @@
         top: 750px;
         left: 650px;
     }
+
+   
 
 
 
@@ -105,6 +109,8 @@
 </head>
 
 <body class="bg-secondary">
+    
+
 
 
 
@@ -113,7 +119,10 @@
 
             <div class="inner-canvas">
                 <img src="layout.png" alt="zoom" id="layout-image">
-                <div class="office bi bi-geo-alt-fill" id="office1">KM</div>
+
+                <button class="office bi bi-geo-alt-fill" type="button" onclick="show()" id="office1">KM</button>
+                <img id="image" src="" class="office" />
+
                 <div class="office bi bi-geo-alt-fill" id="office2">SUPPLY</div>
                 <div class="office bi bi-geo-alt-fill" id="office3">AO</div>
 
@@ -160,7 +169,19 @@
         <button class="btn btn-light rounded-0" style="width: 80px;" onclick="reset()"> <strong>RESET</strong>
             <br></button>
             
-    </div>
+   </div>
+
+   <div class="hud-canvas fixed-top d-flex align-items-end flex-column " style="height: 200px;">
+   
+   <button class="btn btn-light mb-2 rounded-0 p-1"style="width: 80px;"><strong>Unit 1</strong></button>
+        <button class="btn btn-light mb-2 rounded-0 p-2"  style="width: 80px;"><strong>Unit 2</strong></button>
+        <button class="btn btn-light mb-2 rounded-0 p-2"   style="width: 80px;"><strong>Unit 3</strong></button>
+       
+ 
+</div>
+   
+
+
 
     <div class="legend fixed-bottom m-5 p-2 bg-light border-primary border border-4 rounded-0 shadow">
     <h3>Departments</h3>
@@ -171,8 +192,30 @@
     </ul>
     </div>
 
+
     
-    
+    <script>
+       function show() {
+ 
+ /* Get image and change value
+ of src attribute */
+ let image = document.getElementById("image");
+
+ image.src =
+"km-profile.PNG"
+
+ document.getElementById("office1")
+         .style.display = "";
+
+         
+}
+
+    </script>
+    <script>
+        document.getElementById("image").onclick = function(e) {
+  e.target.style.visibility = 'hidden';
+}
+    </script>
 
 
     <script>
@@ -252,6 +295,8 @@
         setTransform();
     }
     </script>
+
+   
 
 
 </body>
