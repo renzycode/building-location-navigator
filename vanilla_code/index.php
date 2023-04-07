@@ -32,10 +32,9 @@
         position: absolute;
         cursor: pointer;
         text-align: center;
-        line-height: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: RED;
         font-weight: bold;
-        font-size: 30px;
-        color: red;
 
 
     }
@@ -43,8 +42,13 @@
 
     #office1 {
         top: 1150px;
-        left: 490px;
+        left: 830px;
 
+    }
+
+    #office1_hover{
+        top: 1125px;
+        left: 800px;
     }
 
     #office2 {
@@ -95,7 +99,7 @@
 
     .legend .square-1 {
         background-color: #f00;
-     
+
     }
 
     .legend .square-2 {
@@ -209,13 +213,15 @@
         color: #fff;
         background-color: red;
         border-radius: 0.25rem !important;
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        transform: translateY(-0.25em);
     }
 
     .hover-unit {
         color: #fff;
         background-color: #0F9449;
         border: 10px;
-        margin-left:7px;  
+        margin-left: 7px;
     }
 
     .hover-unit:hover,
@@ -226,7 +232,38 @@
         color: #fff;
         background-color: #EEB743;
         border-radius: 0.25rem !important;
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        transform: translateY(-0.25em);
+        
     }
+
+    .hover-pinlocation {
+        color: #fff;
+        background-color: #0F9449;
+        border: 10px;
+        margin-left: 7px;
+        width: 10vh;
+  height: 10vh;
+  border-radius: 50%;
+  background-color: #dfd;
+  outline: 1px solid transparent;
+  animation: pulse 2.5s ease-in-out infinite;
+  
+    }
+
+    .hover-pinlocation:hover,
+    .hover-pinlocation:focus,
+    .hover-pinlocation:active,
+    .hover-pinlocation.active,
+    .open>.dropdown-toggle.hover-pinlocation {
+        color: #fff;
+        background-color: #EEB743;    
+    }
+    @keyframes pulse {
+  0% { transform: scale(0); opacity: 0.8;}
+ /* 50% { transform: scale(1); opacity: 0.3;} */
+  100% { transform: scale(2); opacity:0;}
+}
     </style>
 </head>
 
@@ -241,9 +278,11 @@
 
             <div class="inner-canvas">
                 <img src="layout.png" alt="zoom" id="layout-image">
-
-                <button class=" hover-unit office bi bi-geo-alt-fill showkm" type="button" id="office1">KM</button>
-                <img id="image" src="" class="office" />
+              
+                
+                <div class=" bi bi-geo-alt-fill office"id="office1"><h3>KM</h3></div>
+                <a class="hover-pinlocation office showkm "id="office1_hover"></a>
+                
 
                 <div class="office bi bi-geo-alt-fill" id="office2">SUPPLY</div>
                 <div class="office bi bi-geo-alt-fill" id="office3">AO</div>
@@ -275,7 +314,7 @@
 
 
     <div class="hud-canvas fixed-top m-5 p-1 bg-success shadow d-none" style="width: 88px;">
-        <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px; "><strong>FLOOR 0</strong></button>
+        <button class="btn btn-light mb-3 rounded-0 p-1" style="width: 80px; "><strong>FLOOR 0</strong></button>
         <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 1</strong></button>
         <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 2</strong></button>
         <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 3</strong></button>
@@ -298,21 +337,26 @@
 
         <div class="col-3 mb-0">
             <div class="hud-canvas p-1 bg-success shadow mb-0" style="width: 88px;">
-                <button class="hovers btn btn-light mb-2 rounded-0 p-1 " style="width: 80px;"><strong>FLOOR 0</strong></button>
-                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 1</strong></button>
-                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 2</strong></button>
-                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 3</strong></button>
-                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;" onclick="zoomIn()">
+                <button class="hovers btn btn-light mb-3 rounded-0 p-1 " style="width: 80px;"><strong>FLOOR
+                        0</strong></button>
+                <button class="hovers btn btn-light mb-3 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
+                        1</strong></button>
+                <button class="hovers btn btn-light mb-3 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
+                        2</strong></button>
+                <button class="hovers btn btn-light mb-3 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
+                        3</strong></button>
+                <button class="hovers btn btn-light mb-3 rounded-0 p-1" style="width: 80px;" onclick="zoomIn()">
                     <strong>
                         <h5 class="mb-0"><i class="bi bi-zoom-in"></h5></i>
                     </strong>
                 </button>
-                <button class="hovers btn btn-light mb-2 rounded-0" style="width: 80px;" onclick="zoomOut()">
+                <button class="hovers btn btn-light mb-3 rounded-0" style="width: 80px;" onclick="zoomOut()">
                     <strong>
                         <h5 class="mb-0"><i class="bi bi-zoom-out"></h5></i>
                     </strong>
                 </button>
-                <button class="hovers btn btn-light rounded-0" style="width: 80px;" onclick="reset()"> <strong>RESET</strong>
+                <button class="hovers btn btn-light rounded-0" style="width: 80px;" onclick="reset()">
+                    <strong>RESET</strong>
                     <br></button>
             </div>
         </div>
