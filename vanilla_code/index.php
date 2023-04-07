@@ -95,6 +95,7 @@
 
     .legend .square-1 {
         background-color: #f00;
+     
     }
 
     .legend .square-2 {
@@ -192,6 +193,40 @@
     .text-95 {
         font-size: .95em !important;
     }
+
+    .hovers {
+        color: #fff;
+        background-color: #EEB743;
+        border: 10px;
+        border-radius: 0.25rem !important;
+    }
+
+    .hovers:hover,
+    .hovers:focus,
+    .hovers:active,
+    .hovers.active,
+    .open>.dropdown-toggle.hovers {
+        color: #fff;
+        background-color: red;
+        border-radius: 0.25rem !important;
+    }
+
+    .hover-unit {
+        color: #fff;
+        background-color: #0F9449;
+        border: 10px;
+        margin-left:7px;  
+    }
+
+    .hover-unit:hover,
+    .hover-unit:focus,
+    .hover-unit:active,
+    .hover-unit.active,
+    .open>.dropdown-toggle.hover-unit {
+        color: #fff;
+        background-color: #EEB743;
+        border-radius: 0.25rem !important;
+    }
     </style>
 </head>
 
@@ -207,7 +242,7 @@
             <div class="inner-canvas">
                 <img src="layout.png" alt="zoom" id="layout-image">
 
-                <button class="office bi bi-geo-alt-fill showkm" type="button" id="office1">KM</button>
+                <button class=" hover-unit office bi bi-geo-alt-fill showkm" type="button" id="office1">KM</button>
                 <img id="image" src="" class="office" />
 
                 <div class="office bi bi-geo-alt-fill" id="office2">SUPPLY</div>
@@ -239,8 +274,8 @@
     </div>
 
 
-    <div class="hud-canvas fixed-top m-5 p-1 bg-primary shadow d-none" style="width: 88px;">
-        <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 0</strong></button>
+    <div class="hud-canvas fixed-top m-5 p-1 bg-success shadow d-none" style="width: 88px;">
+        <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px; "><strong>FLOOR 0</strong></button>
         <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 1</strong></button>
         <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 2</strong></button>
         <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 3</strong></button>
@@ -262,38 +297,38 @@
     <div class="hud-canvas fixed-top m-3 row" style="width: 500px;">
 
         <div class="col-3 mb-0">
-            <div class="hud-canvas p-1 bg-primary shadow mb-0" style="width: 88px;">
-                <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 0</strong></button>
-                <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 1</strong></button>
-                <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 2</strong></button>
-                <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 3</strong></button>
-                <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;" onclick="zoomIn()">
+            <div class="hud-canvas p-1 bg-success shadow mb-0" style="width: 88px;">
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1 " style="width: 80px;"><strong>FLOOR 0</strong></button>
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 1</strong></button>
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 2</strong></button>
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 3</strong></button>
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;" onclick="zoomIn()">
                     <strong>
                         <h5 class="mb-0"><i class="bi bi-zoom-in"></h5></i>
                     </strong>
                 </button>
-                <button class="btn btn-light mb-2 rounded-0" style="width: 80px;" onclick="zoomOut()">
+                <button class="hovers btn btn-light mb-2 rounded-0" style="width: 80px;" onclick="zoomOut()">
                     <strong>
                         <h5 class="mb-0"><i class="bi bi-zoom-out"></h5></i>
                     </strong>
                 </button>
-                <button class="btn btn-light rounded-0" style="width: 80px;" onclick="reset()"> <strong>RESET</strong>
+                <button class="hovers btn btn-light rounded-0" style="width: 80px;" onclick="reset()"> <strong>RESET</strong>
                     <br></button>
             </div>
         </div>
 
         <div class="col-9">
-            <div class="legend bg-light border-primary border border-4 rounded-0 shadow mb-2 p-2">
+            <div class="legend bg-light border-primary border border-4 rounded-0 shadow mb-2 p-2 ">
                 <h3>UNITS</h3>
                 <ul>
-                    <button class="btn p-0" type="button">
-                        <li> <span class="square square-1"></span> <span class="text-90">KM UNIT</span></li>
+                    <button class="hover-unit btn p-1" type="button">
+                        <li> <span class="square square-1 mt-1"></span> <span class="text-90 mt-1">KM UNIT</span></li>
                     </button>
-                    <button class="btn p-0" type="button">
-                        <li> <span class="square square-2"></span> <span class="text-90">RESU UNIT</span></li>
+                    <button class="hover-unit btn p-1" type="button">
+                        <li> <span class="square square-2 mt-1"></span> <span class="text-90 mt-1">RESU UNIT</span></li>
                     </button>
-                    <button class="btn p-0" type="button">
-                        <li> <span class="square square-3"></span> <span class="text-90">RLED UNIT</span></li>
+                    <button class="hover-unit btn p-1" type="button">
+                        <li> <span class="square square-3 mt-1"></span> <span class="text-90 mt-1">RLED UNIT</span></li>
                     </button>
                 </ul>
             </div>
@@ -310,7 +345,7 @@
                     </div>
 
                     <div class="card-body pt-2 pb-1">
-                        <div role="button"
+                        <div role=" button"
                             class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
                             <span
                                 class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
