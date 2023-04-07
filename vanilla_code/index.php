@@ -214,7 +214,7 @@
     .hovers.active,
     .open>.dropdown-toggle.hovers {
         color: #fff;
-        background-color: #0F9449;
+        background-color: gray;
         border-radius: 0.25rem !important;
         box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
         /*transform: translateY(-0.25em);*/
@@ -275,6 +275,9 @@
             opacity: 0;
         }
     }
+
+    
+
     </style>
 </head>
 
@@ -310,7 +313,7 @@
 
         <div class="col-3 mb-0">
             <div class="hud-canvas p-1 buttons-canvas rounded shadow mb-0" style="width: 88px;">
-                <button class="hovers btn btn-light mb-2 rounded-0 p-1 " style="width: 80px;"><strong>FLOOR
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
                         0</strong></button>
                 <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
                         1</strong></button>
