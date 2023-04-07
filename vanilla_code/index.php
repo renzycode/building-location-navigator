@@ -40,7 +40,7 @@
     }
 
 
-    #office1 {
+    #km {
         top: 1150px;
         left: 830px;
 
@@ -65,48 +65,47 @@
 
 
 
-    .legend {
-        width: px;
-        padding: 2px;
-        border: 3px solid #ccc;
-        border-radius: 5px;
-
+    .units {
+        background-color: #EEB743;
     }
 
-    .legend h3 {
+    .units-title{
+        color: #0F9449;
+    }
+
+    .units h3 {
         font-size: 16px;
         margin-top: 0;
     }
 
-    .legend ul {
+    .units ul {
         list-style: none;
         padding: 0;
         margin: 0;
     }
 
-    .legend li {
+    .units li {
         display: flex;
         align-items: center;
-        margin-bottom: 5px;
     }
 
-    .legend .square {
+    .units .square {
         width: 20px;
         height: 20px;
         margin-right: 10px;
 
     }
 
-    .legend .square-1 {
+    .units .square-1 {
         background-color: #f00;
 
     }
 
-    .legend .square-2 {
+    .units .square-2 {
         background-color: #0f0;
     }
 
-    .legend .square-3 {
+    .units .square-3 {
         background-color: #00f;
     }
 
@@ -198,9 +197,13 @@
         font-size: .95em !important;
     }
 
+    .buttons-canvas{
+        background-color: #EEB743;
+    }
+
     .hovers {
         color: #fff;
-        background-color: #EEB743;
+        background-color: #0F9449;
         border: 10px;
         border-radius: 0.25rem !important;
     }
@@ -211,7 +214,7 @@
     .hovers.active,
     .open>.dropdown-toggle.hovers {
         color: #fff;
-        background-color: red;
+        background-color: #0F9449;
         border-radius: 0.25rem !important;
         box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
         transform: translateY(-0.25em);
@@ -230,7 +233,7 @@
     .hover-unit.active,
     .open>.dropdown-toggle.hover-unit {
         color: #fff;
-        background-color: #EEB743;
+        background-color: #0F9449;
         border-radius: 0.25rem !important;
         box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
         transform: translateY(-0.25em);
@@ -280,7 +283,10 @@
                 <img src="layout.png" alt="zoom" id="layout-image">
               
                 
-                <div class=" bi bi-geo-alt-fill office"id="office1"><h3>KM</h3></div>
+                <div class="office" id="km">
+                    <span class="bi bi-geo-alt-fill"></span>
+                    <span class="text-90 mt-1 shadow rounded">KM UNIT</span>
+                </div>
                 <a class="hover-pinlocation office showkm "id="office1_hover"></a>
                 
 
@@ -291,66 +297,25 @@
         </div>
     </div>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="hud-canvas fixed-top m-5 p-1 bg-success shadow d-none" style="width: 88px;">
-        <button class="btn btn-light mb-3 rounded-0 p-1" style="width: 80px; "><strong>FLOOR 0</strong></button>
-        <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 1</strong></button>
-        <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 2</strong></button>
-        <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR 3</strong></button>
-        <button class="btn btn-light mb-2 rounded-0 p-1" style="width: 80px;" onclick="zoomIn()">
-            <strong>
-                <h5 class="mb-0"><i class="bi bi-zoom-in"></h5></i>
-            </strong>
-        </button>
-        <button class="btn btn-light mb-2 rounded-0" style="width: 80px;" onclick="zoomOut()">
-            <strong>
-                <h5 class="mb-0"><i class="bi bi-zoom-out"></h5></i>
-            </strong>
-        </button>
-        <button class="btn btn-light rounded-0" style="width: 80px;" onclick="reset()"> <strong>RESET</strong>
-            <br></button>
-    </div>
-
 
     <div class="hud-canvas fixed-top m-3 row" style="width: 500px;">
 
         <div class="col-3 mb-0">
-            <div class="hud-canvas p-1 bg-success shadow mb-0" style="width: 88px;">
-                <button class="hovers btn btn-light mb-3 rounded-0 p-1 " style="width: 80px;"><strong>FLOOR
+            <div class="hud-canvas p-1 buttons-canvas rounded shadow mb-0" style="width: 88px;">
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1 " style="width: 80px;"><strong>FLOOR
                         0</strong></button>
-                <button class="hovers btn btn-light mb-3 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
                         1</strong></button>
-                <button class="hovers btn btn-light mb-3 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
                         2</strong></button>
-                <button class="hovers btn btn-light mb-3 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
                         3</strong></button>
-                <button class="hovers btn btn-light mb-3 rounded-0 p-1" style="width: 80px;" onclick="zoomIn()">
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;" onclick="zoomIn()">
                     <strong>
                         <h5 class="mb-0"><i class="bi bi-zoom-in"></h5></i>
                     </strong>
                 </button>
-                <button class="hovers btn btn-light mb-3 rounded-0" style="width: 80px;" onclick="zoomOut()">
+                <button class="hovers btn btn-light mb-2 rounded-0" style="width: 80px;" onclick="zoomOut()">
                     <strong>
                         <h5 class="mb-0"><i class="bi bi-zoom-out"></h5></i>
                     </strong>
@@ -362,17 +327,17 @@
         </div>
 
         <div class="col-9">
-            <div class="legend bg-light border-primary border border-4 rounded-0 shadow mb-2 p-2 ">
-                <h3>UNITS</h3>
+            <div class="units rounded shadow mb-2 p-2 ">
+                <h3 class="units-title">UNITS</h3>
                 <ul>
                     <button class="hover-unit btn p-1" type="button">
-                        <li> <span class="square square-1 mt-1"></span> <span class="text-90 mt-1">KM UNIT</span></li>
+                        <li> <span class="square square-1 mt-1 rounded"></span> <span class="text-90 mt-1">KM UNIT</span></li>
                     </button>
                     <button class="hover-unit btn p-1" type="button">
-                        <li> <span class="square square-2 mt-1"></span> <span class="text-90 mt-1">RESU UNIT</span></li>
+                        <li> <span class="square square-2 mt-1 rounded"></span> <span class="text-90 mt-1">RESU UNIT</span></li>
                     </button>
                     <button class="hover-unit btn p-1" type="button">
-                        <li> <span class="square square-3 mt-1"></span> <span class="text-90 mt-1">RLED UNIT</span></li>
+                        <li> <span class="square square-3 mt-1 rounded"></span> <span class="text-90 mt-1">RLED UNIT</span></li>
                     </button>
                 </ul>
             </div>
