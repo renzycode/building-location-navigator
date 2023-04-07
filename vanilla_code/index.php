@@ -12,6 +12,271 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <style>
+    #layout-image {
+
+        width: 100%;
+
+    }
+
+    .inner-canvas {
+        padding: 400px;
+    }
+
+    body {
+        overflow: hidden;
+        /* Hide scrollbars */
+    }
+
+
+
+    .office {
+        position: absolute;
+        cursor: pointer;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        color: RED;
+        font-weight: bold;
+
+
+    }
+
+
+    #km {
+        top: 1150px;
+        left: 830px;
+
+    }
+
+    #office1_hover {
+        top: 1125px;
+        left: 800px;
+    }
+
+    #office2 {
+        top: 500px;
+        left: 740px;
+    }
+
+    #office3 {
+        top: 750px;
+        left: 650px;
+    }
+
+
+
+
+
+    .units {
+        background-color: #EEB743;
+    }
+
+    .units-title {
+        color: #0F9449;
+    }
+
+    .units h3 {
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    .units ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .units li {
+        display: flex;
+        align-items: center;
+    }
+
+    .units .square {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+
+    }
+
+    .units .square-1 {
+        background-color: #f00;
+
+    }
+
+    .units .square-2 {
+        background-color: #0f0;
+    }
+
+    .units .square-3 {
+        background-color: #00f;
+    }
+
+    .card {
+        box-shadow: 0 20px 27px 0 rgb(0 0 0 / 5%);
+    }
+
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 0 solid rgba(0, 0, 0, .125);
+        border-radius: 1rem;
+    }
+
+    .bgc-h-secondary-l3:hover,
+    .bgc-secondary-l3 {
+        background-color: #ebeff1 !important;
+    }
+
+    .h-4 {
+        height: 2rem;
+    }
+
+    .w-4 {
+        width: 2rem;
+    }
+
+    .d-zoom-1,
+    .d-zoom-2,
+    .d-zoom-3,
+    .dh-zoom-1,
+    .dh-zoom-2,
+    .dh-zoom-3 {
+        transition: -webkit-transform 180ms;
+        transition: transform 180ms;
+        transition: transform 180ms, -webkit-transform 180ms;
+    }
+
+    .mr-25,
+    .mx-25 {
+        margin-right: .75rem !important;
+    }
+
+    .p-25 {
+        padding: .75rem !important;
+    }
+
+    .radius-1 {
+        border-radius: .25rem !important;
+    }
+
+    [class*=bgc-h-] {
+        transition: background-color .15s;
+    }
+
+    .text-default-d3 {
+        color: #416578 !important;
+    }
+
+    .font-bolder,
+    .text-600 {
+        font-weight: 600 !important;
+    }
+
+    .text-90 {
+        font-size: 0.7em !important;
+    }
+
+
+    .bgc-h-secondary-l4:hover,
+    .bgc-secondary-l4 {
+        background-color: #f2f4f6 !important;
+    }
+
+    .text-danger-m1 {
+        color: #da3636 !important;
+    }
+
+    .text-green-m1 {
+        color: #2c8d6a !important;
+    }
+
+    .text-95 {
+        font-size: .95em !important;
+    }
+
+    .buttons-canvas {
+        background-color: #EEB743;
+    }
+
+    .hovers {
+        color: #fff;
+        background-color: #0F9449;
+        border: 10px;
+        border-radius: 0.25rem !important;
+    }
+
+    .hovers:hover,
+    .hovers:focus,
+    .hovers:active,
+    .hovers.active,
+    .open>.dropdown-toggle.hovers {
+        color: #fff;
+        background-color: gray;
+        border-radius: 0.25rem !important;
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        /*transform: translateY(-0.25em);*/
+    }
+
+    .hover-unit {
+        color: #fff;
+        background-color: #0F9449;
+        border: 10px;
+        margin-left: 7px;
+    }
+
+    .hover-unit:hover,
+    .hover-unit:focus,
+    .hover-unit:active,
+    .hover-unit.active,
+    .open>.dropdown-toggle.hover-unit {
+        color: #fff;
+        background-color: #0F9449;
+        border-radius: 0.25rem !important;
+        box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+        transform: translateY(-0.25em);
+
+    }
+
+    .hover-pinlocation {
+        color: #fff;
+        background-color: #0F9449;
+        border: 10px;
+        margin-left: 7px;
+        width: 10vh;
+        height: 10vh;
+        border-radius: 50%;
+        background-color: #dfd;
+        outline: 1px solid transparent;
+        animation: pulse 2.5s ease-in-out infinite;
+
+    }
+
+    .hover-pinlocation:hover,
+    .hover-pinlocation:focus,
+    .hover-pinlocation:active,
+    .hover-pinlocation.active,
+    .open>.dropdown-toggle.hover-pinlocation {
+        color: #fff;
+        background-color: #EEB743;
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(0);
+            opacity: 0.8;
+        }
+
+        /* 50% { transform: scale(1); opacity: 0.3;} */
+        100% {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
+
     </style>
 </head>
 
@@ -63,6 +328,7 @@
 
         <div class="col-3 mb-0">
             <div class="hud-canvas p-1 buttons-canvas rounded shadow mb-0" style="width: 88px;">
+
                 <a href="index.php?floor=0" class="hovers-floor btn btn-success mb-2 rounded border-0 p-1" style="width: 80px; <?php echo ($floor0 ? ' background-color: #0d6a35 !important;' : '') ?> "><strong>FLOOR
                         0</strong></a>
                 <a href="index.php?floor=1" class="hovers-floor btn btn-success mb-2 rounded border-0 p-1" style="width: 80px; <?php echo ($floor1 ? ' background-color: #0d6a35 !important;' : '') ?> "><strong>FLOOR
@@ -72,6 +338,15 @@
                 <a href="index.php?floor=3" class="hovers-floor btn btn-success mb-2 rounded border-0 p-1" style="width: 80px; <?php echo ($floor3 ? ' background-color: #0d6a35 !important;' : '') ?> "><strong>FLOOR
                         3</strong></a>
                 <button class="hovers rounded btn-success btn mb-2 p-1" style="width: 80px;" onclick="zoomIn()">
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
+                        0</strong></button>
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
+                        1</strong></button>
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
+                        2</strong></button>
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
+                        3</strong></button>
+                <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;" onclick="zoomIn()">
                     <strong>
                         <h5 class="mb-0"><i class="bi bi-zoom-in"></h5></i>
                     </strong>
