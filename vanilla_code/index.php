@@ -8,6 +8,7 @@
     <meta https-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <style>
@@ -214,11 +215,7 @@
     .hovers.active,
     .open>.dropdown-toggle.hovers {
         color: #fff;
-<<<<<<< HEAD
         background-color: gray;
-=======
-        background-color: #0F9449;
->>>>>>> parent of ffab369 (update)
         border-radius: 0.25rem !important;
         box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
         /*transform: translateY(-0.25em);*/
@@ -279,10 +276,7 @@
             opacity: 0;
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of ffab369 (update)
     </style>
 </head>
 
@@ -298,12 +292,12 @@
             <div class="inner-canvas">
                 <img src="layout.png" alt="zoom" id="layout-image">
 
-
-                <div class="office" id="km">
+                
+                <div class="office showkm" id="km">
                     <span class="bi bi-geo-alt-fill"></span>
                     <span class="text-90 mt-1 shadow rounded">KM UNIT</span>
                 </div>
-                <a class="hover-pinlocation office showkm " id="office1_hover"></a>
+                <span class="hover-pinlocation-km office showkm"></span>
 
 
                 <div class="office bi bi-geo-alt-fill" id="office2">SUPPLY</div>
@@ -313,12 +307,27 @@
         </div>
     </div>
 
-
+<?php
+    $floor0=FALSE;
+    $floor1=FALSE;
+    $floor2=FALSE;
+    $floor3=FALSE;
+    if(isset($_GET['floor'])){
+        if($_GET['floor']==0){
+            $floor0=TRUE;
+        }elseif($_GET['floor']==1){
+            $floor1=TRUE;
+        }elseif($_GET['floor']==2){
+            $floor2=TRUE;
+        }elseif($_GET['floor']==3){
+            $floor3=TRUE;
+        }
+    }
+?>
     <div class="hud-canvas fixed-top m-3 row" style="width: 500px;">
 
         <div class="col-3 mb-0">
             <div class="hud-canvas p-1 buttons-canvas rounded shadow mb-0" style="width: 88px;">
-<<<<<<< HEAD
 
                 <a href="index.php?floor=0" class="hovers-floor btn btn-success mb-2 rounded border-0 p-1" style="width: 80px; <?php echo ($floor0 ? ' background-color: #0d6a35 !important;' : '') ?> "><strong>FLOOR
                         0</strong></a>
@@ -330,9 +339,6 @@
                         3</strong></a>
                 <button class="hovers rounded btn-success btn mb-2 p-1" style="width: 80px;" onclick="zoomIn()">
                 <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
-=======
-                <button class="hovers btn btn-light mb-2 rounded-0 p-1 " style="width: 80px;"><strong>FLOOR
->>>>>>> parent of ffab369 (update)
                         0</strong></button>
                 <button class="hovers btn btn-light mb-2 rounded-0 p-1" style="width: 80px;"><strong>FLOOR
                         1</strong></button>
@@ -345,12 +351,12 @@
                         <h5 class="mb-0"><i class="bi bi-zoom-in"></h5></i>
                     </strong>
                 </button>
-                <button class="hovers btn btn-light mb-2 rounded-0" style="width: 80px;" onclick="zoomOut()">
+                <button class="hovers rounded btn-success btn mb-2 p-1" style="width: 80px;" onclick="zoomOut()">
                     <strong>
                         <h5 class="mb-0"><i class="bi bi-zoom-out"></h5></i>
                     </strong>
                 </button>
-                <button class="hovers btn btn-light rounded-0" style="width: 80px;" onclick="reset()">
+                <button class="hovers rounded btn-success btn" style="width: 80px;" onclick="reset()">
                     <strong>RESET</strong>
                     <br></button>
             </div>
@@ -358,17 +364,17 @@
 
         <div class="col-9">
             <div class="units rounded shadow mb-2 p-2 ">
-                <h3 class="units-title">UNITS</h3>
+                <h3 class="units-title">FLOOR 1 UNITS</h3>
                 <ul>
-                    <button class="hover-unit btn p-1" type="button">
+                    <button class="hover-unit btn-success btn p-1" type="button" onclick="goto(300,1000,4)">
                         <li> <span class="square square-1 mt-1 rounded"></span> <span class="text-90 mt-1">KM
                                 UNIT</span></li>
                     </button>
-                    <button class="hover-unit btn p-1" type="button">
+                    <button class="hover-unit btn-success btn p-1" type="button">
                         <li> <span class="square square-2 mt-1 rounded"></span> <span class="text-90 mt-1">RESU
                                 UNIT</span></li>
-                    </button>
-                    <button class="hover-unit btn p-1" type="button">
+                    </button> 
+                    <button class="hover-unit btn-success btn p-1" type="button">
                         <li> <span class="square square-3 mt-1 rounded"></span> <span class="text-90 mt-1">RLED
                                 UNIT</span></li>
                     </button>
@@ -492,26 +498,6 @@
             $("#kmprofiles").toggleClass("d-none");
         });
     })
-
-    function show() {
-
-        /* Get image and change value
-        of src attribute */
-        let image = document.getElementById("image");
-
-        image.src =
-            "km-profile.PNG"
-
-        document.getElementById("office1")
-            .style.display = "";
-
-
-    }
-    </script>
-    <script>
-    document.getElementById("image").onclick = function(e) {
-        e.target.style.visibility = 'hidden';
-    }
     </script>
 
 
@@ -572,6 +558,13 @@
 
     function zoomIn() {
         scale = scale + 0.1;
+        setTransform();
+    }
+
+    function goto(argx,argy,argScale) {
+        scale = argScale;
+        pointX = argx;
+        pointY = argy;
         setTransform();
     }
 
