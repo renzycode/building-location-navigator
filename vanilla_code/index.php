@@ -46,7 +46,7 @@
 
     }
 
-    #office1_hover{
+    #office1_hover {
         top: 1125px;
         left: 800px;
     }
@@ -69,7 +69,7 @@
         background-color: #EEB743;
     }
 
-    .units-title{
+    .units-title {
         color: #0F9449;
     }
 
@@ -197,7 +197,7 @@
         font-size: .95em !important;
     }
 
-    .buttons-canvas{
+    .buttons-canvas {
         background-color: #EEB743;
     }
 
@@ -217,7 +217,7 @@
         background-color: #0F9449;
         border-radius: 0.25rem !important;
         box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-        transform: translateY(-0.25em);
+        /*transform: translateY(-0.25em);*/
     }
 
     .hover-unit {
@@ -237,7 +237,7 @@
         border-radius: 0.25rem !important;
         box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
         transform: translateY(-0.25em);
-        
+
     }
 
     .hover-pinlocation {
@@ -246,12 +246,12 @@
         border: 10px;
         margin-left: 7px;
         width: 10vh;
-  height: 10vh;
-  border-radius: 50%;
-  background-color: #dfd;
-  outline: 1px solid transparent;
-  animation: pulse 2.5s ease-in-out infinite;
-  
+        height: 10vh;
+        border-radius: 50%;
+        background-color: #dfd;
+        outline: 1px solid transparent;
+        animation: pulse 2.5s ease-in-out infinite;
+
     }
 
     .hover-pinlocation:hover,
@@ -260,13 +260,21 @@
     .hover-pinlocation.active,
     .open>.dropdown-toggle.hover-pinlocation {
         color: #fff;
-        background-color: #EEB743;    
+        background-color: #EEB743;
     }
+
     @keyframes pulse {
-  0% { transform: scale(0); opacity: 0.8;}
- /* 50% { transform: scale(1); opacity: 0.3;} */
-  100% { transform: scale(2); opacity:0;}
-}
+        0% {
+            transform: scale(0);
+            opacity: 0.8;
+        }
+
+        /* 50% { transform: scale(1); opacity: 0.3;} */
+        100% {
+            transform: scale(2);
+            opacity: 0;
+        }
+    }
     </style>
 </head>
 
@@ -281,14 +289,14 @@
 
             <div class="inner-canvas">
                 <img src="layout.png" alt="zoom" id="layout-image">
-              
-                
+
+
                 <div class="office" id="km">
                     <span class="bi bi-geo-alt-fill"></span>
                     <span class="text-90 mt-1 shadow rounded">KM UNIT</span>
                 </div>
-                <a class="hover-pinlocation office showkm "id="office1_hover"></a>
-                
+                <a class="hover-pinlocation office showkm " id="office1_hover"></a>
+
 
                 <div class="office bi bi-geo-alt-fill" id="office2">SUPPLY</div>
                 <div class="office bi bi-geo-alt-fill" id="office3">AO</div>
@@ -331,13 +339,16 @@
                 <h3 class="units-title">UNITS</h3>
                 <ul>
                     <button class="hover-unit btn p-1" type="button">
-                        <li> <span class="square square-1 mt-1 rounded"></span> <span class="text-90 mt-1">KM UNIT</span></li>
+                        <li> <span class="square square-1 mt-1 rounded"></span> <span class="text-90 mt-1">KM
+                                UNIT</span></li>
                     </button>
                     <button class="hover-unit btn p-1" type="button">
-                        <li> <span class="square square-2 mt-1 rounded"></span> <span class="text-90 mt-1">RESU UNIT</span></li>
+                        <li> <span class="square square-2 mt-1 rounded"></span> <span class="text-90 mt-1">RESU
+                                UNIT</span></li>
                     </button>
                     <button class="hover-unit btn p-1" type="button">
-                        <li> <span class="square square-3 mt-1 rounded"></span> <span class="text-90 mt-1">RLED UNIT</span></li>
+                        <li> <span class="square square-3 mt-1 rounded"></span> <span class="text-90 mt-1">RLED
+                                UNIT</span></li>
                     </button>
                 </ul>
             </div>
