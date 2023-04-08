@@ -90,7 +90,7 @@
             <div class="units rounded shadow mb-2 p-2 ">
                 <h3 class="units-title">FLOOR 1 UNITS</h3>
                 <ul>
-                    <button class="hover-unit btn-success btn p-1" type="button" onclick="goto(300,1000,4)">
+                    <button class="hover-unit btn-success btn p-1"  type="button" onclick="goto(300,1000,4)">
                         <li> <span class="square square-1 mt-1 rounded"></span> <span class="text-90 mt-1">KM
                                 UNIT</span></li>
                     </button>
@@ -215,6 +215,9 @@
     </div-->
 
     <script src="assets\vendor\jquery\jquery.min.js"></script>
+    
+   
+   
 
     <script>
     $(document).ready(function() {
