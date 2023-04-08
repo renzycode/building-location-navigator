@@ -105,7 +105,8 @@
                 </ul>
             </div>
 
-            <div class="legend bg-light p-2 border-primary border border-4 rounded-0 shadow d-none" id="kmprofiles">
+            <div class="legend d-none" id="kmprofiles">
+            <!-- <div class="legend bg-light p-2 border-primary border border-4 rounded-0 shadow d-none" id="kmprofiles"> -->
                 <div class="card ccard radius-t-0 h-100">
                     <div class="position-tl w-102 border-t-3 brc-primary-tp3 ml-n1px mt-n1px"></div>
                     <!-- the blue line on top -->
