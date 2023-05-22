@@ -21,15 +21,11 @@ body {
     cursor: pointer;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
-    color: RED;
     font-weight: bold;
-    animation: bounce 1s infinite;
-
-
 }
 
 
-.hover-pinlocation-km{
+.hover-pinlocation{
 
     color: #fff;
     border: 10px;
@@ -37,32 +33,9 @@ body {
     width: 10vh;
     height: 10vh;
     border-radius: 50%;
-    background-color: rgba(247, 0, 0, 0.3);
     outline: 1px solid transparent;
     animation: pulse 2.5s ease-in-out infinite;
-    top: 255px;
-    left: 575px;
-}
-
-#km {
-    top: 270px;
-    left: 600px;
-
-}
-
-#office1_hover {
-    top: 1125px;
-    left: 800px;
-}
-
-#office2 {
-    top: 500px;
-    left: 740px;
-}
-
-#office3 {
-    top: 750px;
-    left: 650px;
+    
 }
 
 

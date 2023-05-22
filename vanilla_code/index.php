@@ -24,16 +24,53 @@
             <div class="inner-canvas">
                 <img src="layout.png" alt="zoom" id="layout-image">
 
-
-                <div class="office showkm" id="km">
-                    <span class="bi bi-geo-alt-fill"></span>
-                    <span class="text-90 mt-1 shadow rounded">KM UNIT</span>
+                <div>
+                    <div class="office showkm" style="
+                    animation: bounce 1s infinite;
+                    color: RED;
+                    top: 285px;
+                    left: 620px;
+                    ">
+                        <span class="bi bi-geo-alt-fill"></span>
+                    </div>
+                    <span class="hover-pinlocation office showkm" style="
+                    background-color: rgba(247, 0, 0, 0.3);
+                    top: 255px;
+                    left: 575px;
+                    "></span>
                 </div>
-                <span class="hover-pinlocation-km office showkm"></span>
 
+                <div>
+                    <div class="office showkm" style="
+                    animation: bounce 1s infinite;
+                    color: rgba(247, 0, 123);
+                    top: 400px;
+                    left: 800px;
+                    ">
+                        <span class="bi bi-geo-alt-fill"></span>
+                    </div>
+                    <span class="hover-pinlocation office showkm" style="
+                    background-color: rgba(247, 0, 123, 0.3);
+                    top: 400px;
+                    left: 800px;
+                    "></span>
+                </div>
 
-                <div class="office bi bi-geo-alt-fill" id="office2">SUPPLY</div>
-                <div class="office bi bi-geo-alt-fill" id="office3">AO</div>
+                <div>
+                    <div class="office showkm" style="
+                    animation: bounce 1s infinite;
+                    color: rgba(5, 512, 5);
+                    top: 600px;
+                    left: 600px;
+                    ">
+                        <span class="bi bi-geo-alt-fill"></span>
+                    </div>
+                    <span class="hover-pinlocation office showkm" style="
+                    background-color: rgba(5, 512, 5, 0.3);
+                    top: 600px;
+                    left: 600px;
+                    "></span>
+                </div>
 
             </div>
         </div>
@@ -58,7 +95,7 @@
 ?>
     <div class="hud-canvas fixed-top p-3 row" style="width: 500px; 
     background: rgba( 255, 255, 255, 0.1 );
-    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0 );
     backdrop-filter: blur( 3px );
     -webkit-backdrop-filter: blur( 3px );
     border-radius: 0 0 10px 0;
@@ -113,7 +150,7 @@
                 </div>
             </div>
 
-            <div class="units rounded-0 shadow mb-2 bounce" id="kmprofiles">
+            <div class="units rounded-0 shadow mb-2 bounce d-none" id="kmprofiles">
                 <h3 class="units-title p-2 mb-0">KM PROFILES</h3>
                 <div class="p-2 m-2">
                     <div class="row">
@@ -195,6 +232,9 @@
 
                 </div>
             </div>
+
+
+
 
             <div class="legend d-none">
                 <!-- <div class="legend bg-light p-2 border-primary border border-4 rounded-0 shadow d-none" id="kmprofiles"> -->
@@ -284,6 +324,11 @@
                     </div>
                 </div>
             </div>
+
+
+
+
+            
         </div>
 
     </div>
