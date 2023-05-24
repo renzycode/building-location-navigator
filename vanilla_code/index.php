@@ -22,7 +22,33 @@
         <div id="zoom">
 
             <div class="inner-canvas">
-                <img src="layout.png" alt="zoom" id="layout-image">
+                <!--img src="layout.png" alt="zoom" id="layout-image"-->
+                <?php
+                $floor0=FALSE;
+                $floor1=FALSE;
+                $floor2=FALSE;
+                $floor3=FALSE;
+                if(isset($_GET['floor'])){
+                    if($_GET['floor']==1){
+                        $floor1=TRUE;
+                    }elseif($_GET['floor']==2){
+                        $floor2=TRUE;
+                    }elseif($_GET['floor']==3){
+                        $floor3=TRUE;
+                    }elseif($_GET['floor']==4){
+                        $floor4=TRUE;
+                    }
+                }else{
+                    echo '<script> window.location.href = "index.php?floor=1"; </script>';
+                }
+                if($_GET['floor']==1){
+                    echo '<img src="1.jpg" alt="zoom" id="layout-image">';
+                }elseif($_GET['floor']==2){
+                    echo '<img src="2.png" alt="zoom" id="layout-image">';
+                }elseif($_GET['floor']==3){
+                    echo '<img src="3.jpg" alt="zoom" id="layout-image">';
+                }
+                ?>
 
                 <div>
                     <div class="office showkm" style="
@@ -33,7 +59,7 @@
                     ">
                         <span class="bi bi-geo-alt-fill"></span>
                     </div>
-                    <span class="hover-pinlocation office showkm" style="
+                    <span class="pin-pulse office showkm" style="
                     background-color: rgba(247, 0, 0, 0.3);
                     top: 255px;
                     left: 575px;
@@ -42,14 +68,13 @@
 
                 <div>
                     <div class="office showkm" style="
-                    animation: bounce 1s infinite;
                     color: rgba(247, 0, 123);
                     top: 400px;
                     left: 800px;
                     ">
                         <span class="bi bi-geo-alt-fill"></span>
                     </div>
-                    <span class="hover-pinlocation office showkm" style="
+                    <span class="office showkm" style="
                     background-color: rgba(247, 0, 123, 0.3);
                     top: 400px;
                     left: 800px;
@@ -58,14 +83,13 @@
 
                 <div>
                     <div class="office showkm" style="
-                    animation: bounce 1s infinite;
                     color: rgba(5, 512, 5);
                     top: 600px;
                     left: 600px;
                     ">
                         <span class="bi bi-geo-alt-fill"></span>
                     </div>
-                    <span class="hover-pinlocation office showkm" style="
+                    <span class="office showkm" style="
                     background-color: rgba(5, 512, 5, 0.3);
                     top: 600px;
                     left: 600px;
@@ -76,23 +100,6 @@
         </div>
     </div>
 
-    <?php
-    $floor0=FALSE;
-    $floor1=FALSE;
-    $floor2=FALSE;
-    $floor3=FALSE;
-    if(isset($_GET['floor'])){
-        if($_GET['floor']==0){
-            $floor0=TRUE;
-        }elseif($_GET['floor']==1){
-            $floor1=TRUE;
-        }elseif($_GET['floor']==2){
-            $floor2=TRUE;
-        }elseif($_GET['floor']==3){
-            $floor3=TRUE;
-        }
-    }
-?>
     <div class="hud-canvas fixed-top p-3 row" style="width: 500px; 
     background: rgba( 255, 255, 255, 0.1 );
     box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0 );
@@ -105,9 +112,6 @@
         <div class="col-3 mb-0">
             <div class="hud-canvas p-1 buttons-canvas rounded-0 shadow mb-0" style="width: 93px;">
 
-                <a href="index.php?floor=0" class="hovers-floor btn btn-success mb-2 rounded-0 border-0 p-1"
-                    style="width: 80px; <?php echo ($floor0 ? ' background-color: #3c8f76 !important;' : '') ?> ">FLOOR
-                    0</a>
                 <a href="index.php?floor=1" class="hovers-floor btn btn-success mb-2 rounded-0 border-0 p-1"
                     style="width: 80px; <?php echo ($floor1 ? ' background-color: #3c8f76 !important;' : '') ?> ">FLOOR
                     1</a>
@@ -117,6 +121,9 @@
                 <a href="index.php?floor=3" class="hovers-floor btn btn-success mb-2 rounded-0 border-0 p-1"
                     style="width: 80px; <?php echo ($floor3 ? ' background-color: #3c8f76 !important;' : '') ?> ">FLOOR
                     3</a>
+                <a href="index.php?floor=4" class="hovers-floor btn btn-success mb-2 rounded-0 border-0 p-1"
+                    style="width: 80px; <?php echo ($floor4 ? ' background-color: #3c8f76 !important;' : '') ?> ">FLOOR
+                    4</a>
 
                 <button class="hovers btn btn-success rounded-0 mb-2 p-1" style="width: 80px;" onclick="zoomIn()">
                     <strong>
@@ -232,102 +239,6 @@
 
                 </div>
             </div>
-
-
-
-
-            <div class="legend d-none">
-                <!-- <div class="legend bg-light p-2 border-primary border border-4 rounded-0 shadow d-none" id="kmprofiles"> -->
-                <div class="card ccard radius-t-0 h-100">
-                    <div class="position-tl w-102 border-t-3 brc-primary-tp3 ml-n1px mt-n1px"></div>
-                    <!-- the blue line on top -->
-
-                    <div class="card-header pb-3 brc-secondary-l3">
-                        <h6 class="card-title mb-2 mb-md-0 text-dark-m3">
-                            KM PROFILES
-                        </h6>
-                    </div>
-
-                    <div class="card-body pt-2 pb-1">
-                        <div class="col-3">
-                            <span
-                                class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
-                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
-                                    class="h-4 w-4" />
-                            </span>
-                            <span class="text-default-d3 text-90 text-300 mb-0">
-                                ARTHUR
-                            </span>
-                        </div>
-
-                        <div role="button"
-                            class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
-                            <span
-                                class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
-                                <img alt="Derek's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
-                                    class="h-4 w-4" />
-                            </span>
-                            <br>
-                            <br>
-                            <span class="text-default-d3 text-90 text-300 mb-0">
-                                DENNIS
-                            </span>
-
-
-                        </div>
-                        <div role="button"
-                            class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
-                            <span
-                                class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
-                                <img alt="Antonio's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
-                                    class="h-4 w-4" />
-                            </span>
-                            <br>
-                            <br>
-                            <span class="text-default-d3 text-90 text-300 mb-0">
-                                VENUS
-                            </span>
-
-
-                        </div>
-                        <div role="button"
-                            class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
-                            <span
-                                class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
-                                <img alt="Gabriel's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
-                                    class="h-4 w-4" />
-                            </span>
-                            <br>
-                            <br>
-                            <span class="text-default-d3 text-90 text-300 mb-0">
-                                SIR PHIL
-                            </span>
-
-
-                        </div>
-                        <div role="button"
-                            class="d-flex flex-wrap align-items-center my-2 bgc-secondary-l4 bgc-h-secondary-l3 radius-1 p-25 d-style">
-                            <span
-                                class="mr-25 w-4 h-4 overflow-hidden text-center border-1 brc-secondary-m2 radius-round shadow-sm d-zoom-2">
-                                <img alt="David's avatar" src="https://bootdey.com/img/Content/avatar/avatar5.png"
-                                    class="h-4 w-4" />
-                            </span>
-                            <br>
-                            <br>
-                            <span class="text-default-d3 text-90 text-300 mb-0">
-                                SIR RALPH
-                            </span>
-
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
-
-
-
             
         </div>
 
