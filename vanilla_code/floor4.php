@@ -22,7 +22,7 @@
         <div id="zoom">
 
             <div class="inner-canvas">
-                <img src="assets\images\floorplan 1stfinalV.png" alt="zoom" id="layout-image">
+                <img src="assets\images\4th.png" alt="zoom" id="layout-image">
                 <?php
                 $floor0=FALSE;
                 $floor1=FALSE;
@@ -42,7 +42,7 @@
                     echo '<script> window.location.href = "index.php?floor=1"; </script>';
                 }
                 if($_GET['floor']==1){
-                    echo '<img src="#" alt="" id="layout-image">';
+                    echo '<img src="1.jpg" alt="zoom" id="layout-image">';
                 }elseif($_GET['floor']==2){
                     echo '<img src="2.png" alt="zoom" id="layout-image">';
                 }elseif($_GET['floor']==3){
@@ -51,23 +51,22 @@
                 ?>
 
                 <div>
-                    <div class="office showcashier" style="
+                    <div class="office showcanteen" style="
                     animation: bounce 1s infinite;
                     color: RED;
                     top: 285px;
-                    left: 620px;
+                    left: 600px;
                     ">
                         <span class="bi bi-geo-alt-fill"></span>
                     </div>
-                    <span class="pin-pulse office showcashier" style="
+                    <span class="pin-pulse office showcanteen" style="
                     background-color: rgba(247, 0, 0, 0.3);
-                    top: 265px;
-                    left: 595px;
+                    top: 255px;
+                    left: 575px;
                     "></span>
                 </div>
 
                 
-
             </div>
         </div>
     </div>
@@ -84,7 +83,7 @@
         <div class="col-3 mb-0">
             <div class="hud-canvas p-1 buttons-canvas rounded-0 shadow mb-0" style="width: 93px;">
 
-                <a href="index.php?floor=1" class="hovers-floor btn btn-success mb-2 rounded-0 border-0 p-1"
+            <a href="index.php?floor=1" class="hovers-floor btn btn-success mb-2 rounded-0 border-0 p-1"
                     style="width: 80px; <?php echo ($floor1 ? ' background-color: #3c8f76 !important;' : '') ?> ">FLOOR
                     1</a>
                 <a href="floor2.php?floor=2" class="hovers-floor btn btn-success mb-2 rounded-0 border-0 p-1"
@@ -116,40 +115,27 @@
 
         <div class="col-9">
             <div class="units rounded-0 shadow mb-2">
-                <h3 class="units-title p-2 mb-0">1st FLOOR UNITS</h3>
+                <h3 class="units-title p-2 mb-0">4th FLOOR UNITS</h3>
                 <div class="p-2">
                     <span class="btn btn-danger rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
-                        style="font-size: 15px;">HRMO</span>
-                    <span class="btn btn-info rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
-                        style="font-size: 15px;">SUPPLY</span>
+                        style="font-size: 15px;">FH</span>
+                    <span class="btn btn-info rounded-0 p-0 px-1" onclick="goto(250,800,5)"
+                        style="font-size: 15px;">Canteen</span>
                     <span class="btn btn-success rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
-                        style="font-size: 15px;">RESU</span>
+                        style="font-size: 15px;">ADMIN</span>
                     <span class="btn btn-secondary rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
-                        style="font-size: 15px;">HEMS</span>
-
+                        style="font-size: 15px;">RD</span>
                     <span class="btn btn-danger rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
-                        style="font-size: 15px;">HFTC</span>
-                    <span class="btn btn-info rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
-                        style="font-size: 15px;">RECEPTION</span>
-                    <span class="btn btn-success rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
-                        style="font-size: 15px;">HPAC</span>
-                    <span class="btn btn-secondary rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
-                        style="font-size: 15px;">RLED</span>
-                    <span class="btn btn-secondary rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
-                        style="font-size: 15px;">RS</span>
-                    <span class="btn btn-danger rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
-                        style="font-size: 15px;">SBPO</span>
-                    <span class="btn btn-secondary rounded-0 p-0 px-1" onclick="goto(250,800,5)"
-                        style="font-size: 15px;">CASHIER</span>
+                        style="font-size: 15px;">DINING</span>
                 </div>
             </div>
 
-            <div class="units rounded-0 shadow mb-2 bounce d-none" id="cashierprofiles">
-                <h3 class="units-title p-2 mb-0">CASHIER PROFILES</h3>
+            <div class="units rounded-0 shadow mb-2 bounce d-none" id="canteenprofiles">
+                <h3 class="units-title p-2 mb-0">CANTEEN PROFILES</h3>
                 <div class="p-2 m-2">
                     <div class="row">
 
-                        <div class="col-3 profile-box">
+                    <div class="col-3 profile-box">
                             <span class="overflow-hidden">
                                 <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
                                     class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
@@ -250,8 +236,8 @@
 
     <script>
     $(document).ready(function() {
-        $(".showcashier").click(function() {
-            $("#cashierprofiles").toggleClass("d-none");
+        $(".showcanteen").click(function() {
+            $("#canteenprofiles").toggleClass("d-none");
         });
     })
     </script>
