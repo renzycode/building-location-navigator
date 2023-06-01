@@ -53,20 +53,118 @@
                 <div>
                     <div class="office showcashier" style="
                     animation: bounce 1s infinite;
-                    color: RED;
+                    color: #6c757d;
                     top: 285px;
                     left: 620px;
                     ">
                         <span class="bi bi-geo-alt-fill"></span>
                     </div>
                     <span class="pin-pulse office showcashier" style="
-                    background-color: rgba(247, 0, 0, 0.3);
+                    background-color: #6c757d;
                     top: 265px;
                     left: 595px;
                     "></span>
                 </div>
 
+                <div>
+                    <div class="office showsupply" style="
+                    animation: bounce 1s infinite;
+                    color: #0dcaf0;
+                    top: 260px;
+                    left: 500px;
+                    ">
+                        <span class="bi bi-geo-alt-fill"></span>
+                    </div>
+                    <span class="pin-pulse office showsupply" style="
+                    background-color: #0dcaf0;
+                     top: 240px;
+                    left: 480px;
+                    "></span>
+                </div>
+
+                <div>
+                    <div class="office showhftc" style="
+                    animation: bounce 1s infinite;
+                    color: red;
+                    top: 240px;
+                    left: 730px;
+                    ">
+                        <span class="bi bi-geo-alt-fill"></span>
+                    </div>
+                    <span class="pin-pulse office showhftc" style="
+                    background-color: red;
+                     top: 220px;
+                    left: 710px;
+                    "></span>
+                </div>
                 
+
+                <div>
+                    <div class="office showrled" style="
+                    animation: bounce 1s infinite;
+                    color: #6c757d;
+                    top: 180px;
+                    left: 840px;
+                    ">
+                        <span class="bi bi-geo-alt-fill"></span>
+                    </div>
+                    <span class="pin-pulse office showrled" style="
+                    background-color: #6c757d;
+                    top: 170px;
+                    left: 830px;
+                    "></span>
+                </div>
+
+                <div>
+                    <div class="office showhpac" style="
+                    animation: bounce 1s infinite;
+                    color: green;
+                    top: 260px;
+                    left: 845px;
+                    ">
+                        <span class="bi bi-geo-alt-fill"></span>
+                    </div>
+                    <span class="pin-pulse office showhpac" style="
+                    background-color: green;
+                    top: 250px;
+                    left: 830px;
+                    "></span>
+                </div>
+
+                <div>
+                    <div class="office showrecord" style="
+                    animation: bounce 1s infinite;
+                    color: green;
+                    top: 285px;
+                    left: 715px;
+                    ">
+                        <span class="bi bi-geo-alt-fill"></span>
+                    </div>
+                    <span class="pin-pulse office showrecord" style="
+                    background-color: green;
+                    top: 270px;
+                    left: 690px;
+                    "></span>
+                </div>
+
+                <div>
+                    <div class="office showtelemedicne" style="
+                    animation: bounce 1s infinite;
+                    color: red;
+                    top: 170px;
+                    left: 790px;
+                    ">
+                        <span class="bi bi-geo-alt-fill"></span>
+                    </div>
+                    <span class="pin-pulse office showtelemedicine" style="
+                    background-color: red;
+                    top: 170px;
+                    left: 770px;
+                    "></span>
+                </div>
+
+
+               
 
             </div>
         </div>
@@ -120,20 +218,18 @@
                 <div class="p-2">
                     <span class="btn btn-danger rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
                         style="font-size: 15px;">HRMO</span>
-                    <span class="btn btn-info rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
+                    <span class="btn btn-info rounded-0 p-0 px-1" onclick="goto(700,800,4)"
                         style="font-size: 15px;">SUPPLY</span>
                     <span class="btn btn-success rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
                         style="font-size: 15px;">RESU</span>
                     <span class="btn btn-secondary rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
                         style="font-size: 15px;">HEMS</span>
 
-                    <span class="btn btn-danger rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
+                    <span class="btn btn-danger rounded-0 p-0 px-1" onclick="goto(50,900,4)"
                         style="font-size: 15px;">HFTC</span>
-                    <span class="btn btn-info rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
-                        style="font-size: 15px;">RECEPTION</span>
-                    <span class="btn btn-success rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
+                    <span class="btn btn-success rounded-0 p-0 px-1" onclick="goto(5,700,4)"
                         style="font-size: 15px;">HPAC</span>
-                    <span class="btn btn-secondary rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
+                    <span class="btn btn-secondary rounded-0 p-0 px-1" onclick="goto(10,1000,4)"
                         style="font-size: 15px;">RLED</span>
                     <span class="btn btn-secondary rounded-0 p-0 px-1" onclick="goto(300,1000,4)"
                         style="font-size: 15px;">RS</span>
@@ -141,11 +237,513 @@
                         style="font-size: 15px;">SBPO</span>
                     <span class="btn btn-secondary rounded-0 p-0 px-1" onclick="goto(250,800,5)"
                         style="font-size: 15px;">CASHIER</span>
+                    <span class="btn btn-success rounded-0 p-0 px-1" onclick="goto(250,800,4)"
+                        style="font-size: 15px;">RECORD</span>
+                    <span class="btn btn-danger rounded-0 p-0 px-1" onclick="goto(50,900,4)"
+                        style="font-size: 15px;">TELEMEDICINE</span>
                 </div>
             </div>
 
             <div class="units rounded-0 shadow mb-2 bounce d-none" id="cashierprofiles">
                 <h3 class="units-title p-2 mb-0">CASHIER PROFILES</h3>
+                <div class="p-2 m-2">
+                    <div class="row">
+
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Arthur 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                            Venus 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Phil
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Denis
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Arthur
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Venus 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Phil
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Denis
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="units rounded-0 shadow mb-2 bounce d-none" id="supplyprofiles">
+                <h3 class="units-title p-2 mb-0">SUPPLY PROFILES</h3>
+                <div class="p-2 m-2">
+                    <div class="row">
+
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Arthur 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                            Venus 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Phil
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Denis
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Arthur
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Venus 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Phil
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Denis
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="units rounded-0 shadow mb-2 bounce d-none" id="hftcprofiles">
+                <h3 class="units-title p-2 mb-0">HFTC PROFILES</h3>
+                <div class="p-2 m-2">
+                    <div class="row">
+
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Arthur 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                            Venus 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Phil
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Denis
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Arthur
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Venus 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Phil
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Denis
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="units rounded-0 shadow mb-2 bounce d-none" id="rledprofiles">
+                <h3 class="units-title p-2 mb-0">RLED PROFILES</h3>
+                <div class="p-2 m-2">
+                    <div class="row">
+
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Arthur 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                            Venus 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Phil
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Denis
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Arthur
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Venus 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Phil
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Denis
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="units rounded-0 shadow mb-2 bounce d-none" id="hpacprofiles">
+                <h3 class="units-title p-2 mb-0">HPAC PROFILES</h3>
+                <div class="p-2 m-2">
+                    <div class="row">
+
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Arthur 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                            Venus 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Phil
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Denis
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Arthur
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Venus 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Phil
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Denis
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="units rounded-0 shadow mb-2 bounce d-none" id="recordprofiles">
+                <h3 class="units-title p-2 mb-0">RECORD PROFILES</h3>
+                <div class="p-2 m-2">
+                    <div class="row">
+
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Arthur 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                            Venus 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Phil
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Denis
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar1.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Arthur
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar2.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Venus 
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar3.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Phil
+                            </p>
+                        </div>
+                        <div class="col-3 profile-box">
+                            <span class="overflow-hidden">
+                                <img alt="Alexa's avatar" src="https://bootdey.com/img/Content/avatar/avatar4.png"
+                                    class="h-4 w-4 mx-auto d-flex justify-content-center m-1" />
+                            </span>
+                            <p class="text-default-d3 text-90 text-300 mb-0 text-center">
+                                Denis
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="units rounded-0 shadow mb-2 bounce d-none" id="telemedicineprofiles">
+                <h3 class="units-title p-2 mb-0">TELEMEDICINE PROFILES</h3>
                 <div class="p-2 m-2">
                     <div class="row">
 
@@ -255,6 +853,56 @@
         });
     })
     </script>
+
+<script>
+    $(document).ready(function() {
+        $(".showsupply").click(function() {
+            $("#supplyprofiles").toggleClass("d-none");
+        });
+    })
+    </script>
+
+<script>
+    $(document).ready(function() {
+        $(".showhftc").click(function() {
+            $("#hftcprofiles").toggleClass("d-none");
+        });
+    })
+    </script>
+
+<script>
+    $(document).ready(function(){
+       $(".showrled").click(function() {
+         $("#rledprofiles").toggleClass("d-none");
+       });
+    })
+</script>
+
+<script>
+    $(document).ready(function(){
+       $(".showhpac").click(function() {
+         $("#hpacprofiles").toggleClass("d-none");
+       });
+    })
+</script>
+
+<script>
+    $(document).ready(function(){
+       $(".showrecord").click(function() {
+         $("#recordprofiles").toggleClass("d-none");
+       });
+    })
+</script>
+
+
+<script>
+    $(document).ready(function(){
+       $(".showhtelemedicine").click(function() {
+         $("#telemedicineprofiles").toggleClass("d-none");
+       });
+    })
+</script>
+    
 
 
     <script>
